@@ -1,0 +1,11 @@
+{
+  "name": "array_assigment1_findthirdlargest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Question1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Irushinie",
+  "license": "ISC"
+}
