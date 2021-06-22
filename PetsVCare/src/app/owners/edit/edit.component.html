@@ -1,0 +1,51 @@
+<div id="conta" class="mt-3">
+    <div class="cont mt-5">
+        <form class="cont" #ownerForm="ngForm" (ngSubmit)="onSubmit(ownerForm)">
+            <div class="form-group ">
+                <br>
+                <strong style="margin-left: 4px; margin-bottom: 80px;">Fill the below fields</strong>
+                <div>
+
+                    <input style="width:400px; margin-left: 87px; margin-bottom: 26px;" placeholder="Enter First Name"
+                        type="text" class="form-control" id="firstName" ngModel name="firstName">
+                </div>
+                <div>
+
+                    <input style="width:400px; margin-left: 87px;  margin-bottom: 26px;" placeholder="Enter Last Name"
+                        type="text" class="form-control" id="lastName" ngModel name="lastName">
+                </div>
+                <div>
+
+
+                    <input style="width:400px; margin-left: 87px;  margin-bottom: 26px;" placeholder="Enter Pet Name"
+                        type="text" class="form-control" id="petName" ngModel name="petName">
+                </div>
+                <div>
+
+
+                    <input style="width:400px; margin-left: 87px;  margin-bottom: 26px;" placeholder="Address"
+                        type="text" class="form-control" id="address" ngModel name="address">
+                </div>
+                <div>
+
+                    <input style="width:400px; margin-left: 87px;  margin-bottom: 26px;"
+                        placeholder="Enter your Phone Number" type="text" class="form-control" id="phoneNumber" ngModel
+                        name="phoneNumber">
+                </div>
+
+                <button style="width:350px; margin-left: 121px;  margin-bottom: 26px;" type="submit"
+                    class="btn btn-dark btn-lg">Add Me</button>
+            </div>
+            <button style="width:350px; margin-left: 121px;  margin-bottom: 26px;" type="reset"
+                class="btn btn-dark btn-lg" >Cancel</button>
+        
+    
+
+    </form>
+    <div class="sub-cont">
+        <div class="img">
+
+        </div>
+
+    </div>
+</div>

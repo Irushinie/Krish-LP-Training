@@ -1,0 +1,54 @@
+<div class="card-body" id="ownernav">
+    <img src="../../assets/text.gif" alt="">
+    <div class="row">
+        <div class="col-md-4">
+            <input type="text" placeholder="Search by Name"  [(ngModel)]="firstNameFilter" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h6 style="background-color:blanchedalmond; width: 100px; ">Filtered by: {{firstNameFilter}} </h6>
+            <button type=" button" class="btn btn-info mt-2 mb-2" routerLink="/owners/add/0">Create New Owner</button>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table" *ngIf="owners.length" style="background-color:rgba(238, 237, 237, 0.7) ">
+            <thead>
+                <tr>
+                    <th>
+                        <button class="btn btn-warning" (click)="toggleIcon()">
+                            {{showIcon? "Hide":"Show"}} Owner
+                        </button>
+                    </th>
+                    <!-- <th>Owner ID</th> -->
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Pet Name</th>
+                    <th>Address</th>
+                    <th>Phone Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor=" let owners of filteredOwners">
+                    <td>
+                        <img [src]="owners.icon" *ngIf='showIcon' style="width: 170px; height: 250px;">
+                    </td>
+                    <!-- <td>{{owners.id}}</td> -->
+                    <td>{{owners.firstName}}</td>
+                    <td>{{owners.lastName}}</td>
+                    <td>{{owners.petName}}</td>
+                    <td>{{owners.address}}</td>
+                    <td>{{owners.phoneNumber}}</td>
+                    <td><button type="button" class="btn btn-info"[routerLink]="['/owners/update',owners.id]">Update</button></td>
+                    <td><button type="button" class="btn btn-danger" (click)="delete(owners.id)">Delete row</button>
+                    </td>
+
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="card-footer text-muted">
+
+</div>

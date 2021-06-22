@@ -1,0 +1,53 @@
+<br>
+<div class="card-body mt-2" id="ownernav">
+    <img src="../../assets/pet.gif" alt="">
+
+    <div class="row mt-2">
+
+        <div class="col-mt-2"> Search by Pet's name:</div>
+        <div class="col-mt-4">
+            <input type="text" [(ngModel)]="firstPNameFilter" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mt-2">
+            <h6 style="background-color:blanchedalmond; width: 100px; ">Filtered by: {{firstPNameFilter}} </h6>
+            <button type="button" class="btn btn-warning" routerLink="/pets/add/0">Create a New Pet</button>
+
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table" *ngIf="pets.length"  style="background-color:rgba(238, 237, 237, 0.7) ">
+            <thead>
+                <tr>
+
+                    <!-- <th>Pet ID</th> -->
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Breed</th>
+                    <th>Age</th>
+                    <th>Owner Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor=" let pets of filteredPets">
+
+
+                    <!-- <td>{{pets.pid}}</td> -->
+                    <td>{{pets.name}}</td>
+                    <td>{{pets.type}}</td>
+                    <td>{{pets.breed}}</td>
+                    <td>{{pets.age}}</td>
+                    <td>{{pets.ownerName}}</td>
+                    <td><button type="button" class="btn btn-info"[routerLink]="['/pets/updatepets',pets.pid]">Update</button></td>
+                    <td><button type="button" class="btn btn-danger" (click)="delete(pets.pid)">Delete row</button>
+                    </td>
+
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="card-footer text-muted">
+</div>

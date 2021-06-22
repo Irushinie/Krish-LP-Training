@@ -1,0 +1,54 @@
+
+
+<div id="conta" class="mt-3">
+    <div class="cont mt-5">
+        <form class="cont" #petForm="ngForm" (ngSubmit)="onSubmit(petForm)">
+            <div class="form-group ">
+            <br>
+            <strong style="margin-left: 4px; margin-bottom: 80px;">Fill the below </strong>
+            <div>
+
+                <input style="width:400px; margin-left: 87px; margin-bottom: 26px;" placeholder="Enter  Name"
+                    type="text" class="form-control" pid="name" ngModel name="name">
+            </div>
+            <div>
+
+                <input style="width:400px; margin-left: 87px;  margin-bottom: 26px;" placeholder="Enter Type"
+                    type="text" class="form-control" pid="type" ngModel name="type">
+            </div>
+            <div>
+
+
+                <input style="width:400px; margin-left: 87px;  margin-bottom: 26px;" placeholder="Enter Breed"
+                    type="text" class="form-control" pid="breed" ngModel name="breed">
+            </div>
+            <div>
+
+
+                <input style="width:400px; margin-left: 87px;  margin-bottom: 26px;" placeholder="Enter Age"
+                    type="text" class="form-control" pid="age" ngModel name="age">
+            </div>
+            <div>
+
+                <input style="width:400px; margin-left: 87px;  margin-bottom: 26px;"
+                    placeholder="Enter the Owner's name" type="text" class="form-control" pid="ownerName" ngModel
+                    name="ownerName">
+            </div>
+
+            <button style="width:350px; margin-left: 121px;  margin-bottom: 26px;" type="submit"
+                class="btn btn-dark btn-lg">Add Me</button>
+        </div>
+        <button style="width:350px; margin-left: 121px;  margin-bottom: 26px;" type="reset"
+            class="btn btn-dark btn-lg" >Cancel</button>
+    
+
+
+</form>
+        <div class="sub-cont">
+            <div class="img">
+              
+            </div>
+            
+        </div>
+    </div>
+    
