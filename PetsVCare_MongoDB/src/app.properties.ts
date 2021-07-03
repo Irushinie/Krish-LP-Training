@@ -1,0 +1,1 @@
+export const MONGO_CONNECTION="mongodb+srv://root:Rootpassword@123@cluster0.lagbk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
